@@ -1,4 +1,3 @@
-// Tüm import ifadelerini dosyanın en üstüne taşıyın
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JS (Popper.js dahil)
 import './App.css';
