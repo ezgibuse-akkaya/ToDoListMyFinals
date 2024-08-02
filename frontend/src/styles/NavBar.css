@@ -1,4 +1,9 @@
 .navbar-custom {
-    background-color: #51aef3;
-    margin-bottom: 15px; /* Alt boşluk için*/
+    background-color: #1dc1de;
+    margin-bottom: 20px; /* Alt boşluk için*/
+  }
+  .navbar-brand {
+    font-style: italic; /* Yazı tipini italik yapar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Yazıya gölge ekler */
+    font-family: 'Cursive', sans-serif; /* Yazı tipini şekilli yapar (Cursive gibi) */
   }

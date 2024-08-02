@@ -7,7 +7,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div className="container-fluid">
         <Link className="navbar-brand" to={"/"}>
-          EBI ToDo List Management
+        ꧁༺ EBI ToDo List Management ༻꧂
         </Link>
         <button
           className="navbar-toggler"
