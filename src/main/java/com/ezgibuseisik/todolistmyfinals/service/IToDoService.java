@@ -8,4 +8,5 @@ public interface IToDoService {
     ToDo updateToDo(ToDo toDo, Long id);
     ToDo getToDoById(Long id);
     void deleteToDo(Long id);
+    void deleteAllToDos();
 }

@@ -56,5 +56,9 @@ public class ToDoService implements IToDoService{
     private boolean ToDoAlreadyExists(String email) {
         return toDoRepository.findByEmail(email).isPresent();
     }
+    public void deleteAllToDos() {
+        toDoRepository.deleteAll();
+    }
+
 }
 

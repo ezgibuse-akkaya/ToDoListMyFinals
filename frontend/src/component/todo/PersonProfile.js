@@ -4,6 +4,7 @@ import React, {
 } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import profile from '../../styles/profile.png';
 
 const PersonPofile = () => {
 	const { id } = useParams();
@@ -36,7 +37,7 @@ const PersonPofile = () => {
 						<div className="card mb-4">
 							<div className="card-body text-center">
 								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+									src={profile}
 									alt="avatar"
 									className="rounded-circle img-fluid"
 									style={{ width: 150 }}

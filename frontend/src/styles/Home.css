@@ -1,0 +1,46 @@
+/* Home.css */
+
+.custom-card {
+    border-radius: 12px; /* Kart köşelerini yuvarla */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover efektleri için geçiş */
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05); /* Kart üzerine gelindiğinde büyütme efekti */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Hover efekti için gölge */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Mavi arka plan rengi */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 20px; /* Buton köşelerini yuvarla */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Hover rengi */
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Yeşil arka plan rengi */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 20px; /* Buton köşelerini yuvarla */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Hover rengi */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Kırmızı arka plan rengi */
+    border: none; /* Kenarlık kaldır */
+    border-radius: 20px; /* Buton köşelerini yuvarla */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Hover rengi */
+  }
+  
+  footer p {
+    color: #555; /* Açık gri renk */
+  }
+  

@@ -1,9 +1,66 @@
+/* NavBar.css */
+
 .navbar-custom {
-    background-color: #1dc1de;
-    margin-bottom: 20px; /* Alt boşluk için*/
+    background-color: #42a5f5; /* Açık mavi arka plan rengi */
+    padding: 10px 20px; /* Üst ve alt padding */
+    margin-bottom: 10px; /* Navbar'ın altına 10px boşluk ekler */
   }
+  
   .navbar-brand {
-    font-style: italic; /* Yazı tipini italik yapar */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Yazıya gölge ekler */
-    font-family: 'Cursive', sans-serif; /* Yazı tipini şekilli yapar (Cursive gibi) */
+    font-size: 1.5rem; /* Marka ismi boyutu */
+    color: #ffffff; /* Beyaz renk */
+    text-decoration: none; /* Alt çizgi kaldır */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
   }
+  
+  .navbar-brand:hover {
+    color: #bbdefb; /* Marka üzerine gelindiğinde renk */
+    text-decoration: none; /* Alt çizgi kaldır */
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff; /* Hamburger menü sınır rengi */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none; /* Varsayılan ikon görüntüsünü kaldır */
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none; /* Tıklanma efekti yok */
+  }
+  
+  .nav-link {
+    color: #ffffff; /* Yazı rengi */
+    font-size: 1rem; /* Yazı boyutu */
+    margin-left: 15px; /* Sol margin */
+  }
+  
+  .nav-link:hover {
+    color: #bbdefb; /* Üzerine gelindiğinde renk değişimi */
+    text-decoration: none; /* Alt çizgi kaldır */
+  }
+  
+  .nav-item {
+    margin-left: 10px; /* Her bir menü öğesi arasında boşluk */
+  }
+  
+  .navbar-nav {
+    margin-left: auto; /* Sağ tarafa hizala */
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbar-custom {
+      padding: 5px 10px; /* Mobil ekranlarda padding küçültme */
+    }
+    
+    .navbar-brand {
+      font-size: 1.25rem; /* Mobil ekranlarda marka boyutu küçültme */
+    }
+  
+    .nav-link {
+      font-size: 0.875rem; /* Mobil ekranlarda yazı boyutu küçültme */
+      margin-left: 0; /* Mobil ekranlarda margin kaldırma */
+    }
+  }
+  
