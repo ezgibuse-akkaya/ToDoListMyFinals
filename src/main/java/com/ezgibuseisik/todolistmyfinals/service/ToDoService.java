@@ -1,4 +1,3 @@
-
 package com.ezgibuseisik.todolistmyfinals.service;
 
 import com.ezgibuseisik.todolistmyfinals.exception.ToDoAlreadyExistsException;
@@ -10,24 +9,23 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
 @Service
 @RequiredArgsConstructor
-public class ToDoService implements IToDoService{
+public class ToDoService implements IToDoService {
     private final ToDoRepository toDoRepository;
 
     @Override
     public List<ToDo> getToDos() {
         return toDoRepository.findAll();
     }
+
     @Override
     public ToDo addToDo(ToDo toDo) {
-        if (ToDoAlreadyExists(toDo.getEmail())){
-            throw  new ToDoAlreadyExistsException(toDo.getEmail()+ " already exists!");
+        if (ToDoAlreadyExists(toDo.getEmail())) {
+            throw new ToDoAlreadyExistsException(toDo.getEmail() + " already exists!");
         }
         return toDoRepository.save(toDo);
     }
-
 
     @Override
     public ToDo updateToDo(ToDo toDo, Long id) {
@@ -36,6 +34,7 @@ public class ToDoService implements IToDoService{
             st.setLastName(toDo.getLastName());
             st.setEmail(toDo.getEmail());
             st.setToDoExplanation(toDo.getToDoExplanation());
+            st.setDone(toDo.isDone()); // Update the completion status
             return toDoRepository.save(st);
         }).orElseThrow(() -> new ToDoNotFoundException("Sorry, this ToDo could not be found"));
     }
@@ -43,22 +42,30 @@ public class ToDoService implements IToDoService{
     @Override
     public ToDo getToDoById(Long id) {
         return toDoRepository.findById(id)
-                .orElseThrow(() -> new ToDoNotFoundException("Sorry, no ToDo found with the Id :" +id));
+                .orElseThrow(() -> new ToDoNotFoundException("Sorry, no ToDo found with the Id :" + id));
     }
 
     @Override
     public void deleteToDo(Long id) {
-        if (!toDoRepository.existsById(id)){
+        if (!toDoRepository.existsById(id)) {
             throw new ToDoNotFoundException("Sorry, ToDo not found");
         }
         toDoRepository.deleteById(id);
     }
+
     private boolean ToDoAlreadyExists(String email) {
         return toDoRepository.findByEmail(email).isPresent();
     }
+
     public void deleteAllToDos() {
         toDoRepository.deleteAll();
     }
 
+    // Add method to update completion status
+    public ToDo updateCompletionStatus(Long id, boolean done) {
+        return toDoRepository.findById(id).map(st -> {
+            st.setDone(done);
+            return toDoRepository.save(st);
+        }).orElseThrow(() -> new ToDoNotFoundException("Sorry, this ToDo could not be found"));
+    }
 }
-

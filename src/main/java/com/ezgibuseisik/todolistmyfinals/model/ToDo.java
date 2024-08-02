@@ -24,5 +24,5 @@ public class ToDo {
     @NaturalId(mutable = true)
     private String email;
     private String toDoExplanation;
-
+    private boolean done;
 }

@@ -1,4 +1,5 @@
 package com.ezgibuseisik.todolistmyfinals.service;
+
 import com.ezgibuseisik.todolistmyfinals.model.ToDo;
 import java.util.List;
 
@@ -9,4 +10,5 @@ public interface IToDoService {
     ToDo getToDoById(Long id);
     void deleteToDo(Long id);
     void deleteAllToDos();
+    ToDo updateCompletionStatus(Long id, boolean done); // Yeni metodu buraya ekleyin
 }

@@ -8,33 +8,45 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@CrossOrigin("http://localhost:3000") //allowing client application to consume the backed
+@CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/todos")
 @RequiredArgsConstructor
-
 public class ToDoController {
-    private final IToDoService ToDoService;
+    private final IToDoService toDoService;
+
     @GetMapping
-    public ResponseEntity<List<ToDo>> getToDos(){
-        return new ResponseEntity<>(ToDoService.getToDos(), HttpStatus.FOUND);
+    public ResponseEntity<List<ToDo>> getToDos() {
+        return new ResponseEntity<>(toDoService.getToDos(), HttpStatus.OK);
     }
+
     @PostMapping
-    public ToDo addToDo(@RequestBody ToDo ToDo){
-        return ToDoService.addToDo(ToDo);
+    public ToDo addToDo(@RequestBody ToDo toDo) {
+        return toDoService.addToDo(toDo);
     }
+
     @PutMapping("/update/{id}")
-    public ToDo updateToDo(@RequestBody ToDo ToDo, @PathVariable Long id){
-        return ToDoService.updateToDo(ToDo, id);
+    public ToDo updateToDo(@RequestBody ToDo toDo, @PathVariable Long id) {
+        return toDoService.updateToDo(toDo, id);
     }
+
+    @PutMapping("/updateStatus/{id}")
+    public ToDo updateCompletionStatus(@PathVariable Long id, @RequestParam boolean done) {
+        return toDoService.updateCompletionStatus(id, done);
+    }
+
     @DeleteMapping("/delete/{id}")
-    public void deleteToDo(@PathVariable Long id){
-        ToDoService.deleteToDo(id);
+    public void deleteToDo(@PathVariable Long id) {
+        toDoService.deleteToDo(id);
     }
+
     @GetMapping("/todo/{id}")
-    public ToDo getToDoById(@PathVariable Long id){
-        return ToDoService.getToDoById(id);
+    public ToDo getToDoById(@PathVariable Long id) {
+        return toDoService.getToDoById(id);
     }
+
     @DeleteMapping("/deleteAll")
-    public void deleteAllToDos() { ToDoService.deleteAllToDos(); }
+    public void deleteAllToDos() {
+        toDoService.deleteAllToDos();
+    }
 }
