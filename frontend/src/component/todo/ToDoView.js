@@ -54,7 +54,7 @@ const ToDoView = () => {
         <section>
             <div className="header-container">
                 <h1 className="main-title">ToDo~List</h1>
-                <p className="sub-title">Manage our tasks efficiently</p>
+                <p className="sub-title">Manage our tasks efficiently!</p>
             </div>
             <div className="search-container">
                 <Search search={search} setSearch={setSearch} className="search" />

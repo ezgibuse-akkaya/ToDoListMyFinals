@@ -1,8 +1,76 @@
-# React - Spring Boot - Devops
-[Html To Jsx](https://transform.tools/html-to-jsx)
+# Spring Boot & React JS
+![](https://komarev.com/ghpvc/?username=hamitmizrak)
 
+---
+## GitHub
+[GitHub](https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git)
+
+git clone https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git
+
+
+
+## _N-Tier Architecture_
+
+[![N|GitHub](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/200px-GitHub_Invertocat_Logo.svg.png)](https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git)
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git)
+![README PNG](./image/readme.png)
+
+---
+## Blog Project:
+Spring Boot And React JS
+
+- Backend: Java Core, Spring Framework
+- Frontend:  React JS, JS, +ES5
+- 🎁 BLOG
+--- 
+
+## TECHNOLOGY && Features
+- HTML5
+- CSS3
+- RESPONSIVE DESIGN
+- JS
+- BOOTSTRAP5
+- JQUERY
+- JAVASCRIPT
+- SQL
+- H2DB
+- MYSQL
+- POSTGRESQL
+- JAVA CORE
+- SPRING FRAMEWORK
+- SPRING BOOT
+---
+
+## Libraries && Programming
+- Thymeleaf
+- Lombok
+- Validation
+- Mysql
+- Postgresql
+- Model Mapper
+- Password Encoder
+- Open Api Configuration
+- H2DB
+- MYSQL
+- POSTGRESQL
+- JAVA CORE
+- SPRING FRAMEWORK
+- SPRING BOOT
+
+---
+
+## REACT INSTALL
+``sh
+npx create-react-app blog
+cd blog
 npm start
-npm run start
+
+npm install axios --save
+npm install react-router-dom --save
+npm install i18next --save
+npm install react-i18next --save
+```
 
 ## Npm Komutları 
 ```sh
@@ -60,12 +128,7 @@ npm update # Bütün bağımlılıkları güncellemek
 npm update express 
 ```
 
-```sh
-npm install
-npm update
-```
-
-## Nodemon 
+## Nodemon
 ```sh
 normalde: node index 
 nodemonla birlite: nodemon index otomatikleştiriyoruz.
@@ -77,7 +140,6 @@ npm install nodemon --save
 -q: terminalde az açıklamalar görünsün
 
 npm install -g nodemon --save 
-npm install -g nodemon --save-dev
 nodemon index.js 
 nodemon -q index.js 
 
@@ -92,197 +154,12 @@ npm run nodemon_q
 
 
 ---
-### `npm start`
-### `npm test`
-### `npm run build`
-### `npm run eject`
-### `npm run build` fails to minify
-
-## REACT JS INSTALL
-``sh
-npx create-react-app blog
-cd blog
-npm start
-
-#### backend with frontend connectivity
-npm install axios --save
-
-#### for Router
-npm install react-router-dom --save
-
-#### for language
-npm install i18next --save
-npm install react-i18next --save
-
-#### LocalStorage Bilgileri gizle
-npm install secure-ls --save
-
-#### Redux
-npm install redux react-redux --save
-
-#### middleWare
-npm install redux-thunk
-```
-----------------------------------------------------------------
-## TAILWIND INSTALL
-#### Package.json yoksa ekle, yoksa ekleme
-npm init -y
-
-#### D: Developer
-npm install -D tailwindcss 
-
-####  tailwind.config.js
-npx tailwindcss init 
-```sh 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-      "./src/**/*.{js,jsx,ts,tsx}",
-    ],
-    theme: {
-
-        container: {
-            center: true
-        },
-
-        extend: {
-            colors: {
-                "ezgibuseisik-red": "red",
-                "ezgibuseisik-blue": "blue",
-                "ezgibuseisik-yellow": "yellow",
-                "ezgibuseisik-gray": "#f2f2f2",
-            },
-            fontFamily: {
-                font: ['Montserrat', 'sans-serif'],
-                open: ['Open Sans', 'sans-serif'],
-            }
-        },
-    },
-    plugins: [],
-}
-
-```
-
-
-#### dizin oluştur (src) ancak react zaten var tekrardan kurma
-css eklemek => tailwind_input.css
-npx tailwindcss -i ./src/tailwind_input.css -o ./src/index.css --watch
-npm run watch
-
-## NOT: package.json olduğu dizine bunları ekliyoruz.
-#### for React JS , Tailwind
-npm install -D tailwindcss
-npx tailwindcss init
-
----
-tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-content: [
-"./src/**/*.{js,jsx,ts,tsx}",
-],
-theme: {
-
-        container: {
-            center: true
-        },
-
-        extend: {
-            colors: {
-                "ezgibuseisik-red": "red",
-                "ezgibuseisik-blue": "blue",
-                "ezgibuseisik-yellow": "yellow",
-                "ezgibuseisik-gray": "#f2f2f2",
-            },
-            fontFamily: {
-                font: ['Montserrat', 'sans-serif'],
-                open: ['Open Sans', 'sans-serif'],
-            }
-        },
-    },
-    plugins: [],
-}
-
-
----
-index.css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
---- 
-App.js
-export default function App() {
-return (
-<h1 className="text-3xl font-bold underline">
-Hello world!
-</h1>
-)
-}
-
-------------------------------------------------------------------------------
-# Spring Boot & React JS
-![](https://komarev.com/ghpvc/?username=ezgibuseisik)
-## _N-Tier Architecture_
-
-[![N|GitHub](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/200px-GitHub_Invertocat_Logo.svg.png)](https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git )
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ezgibuse-akkaya/ToDoListMyFinals.git)
-![README PNG](./image/readme.png)
-
----
-## Blog Project:
-Spring Boot And React JS
-
-- Backend: Java Core, Spring Framework
-- Frontend:  React JS, JS, +ES5
-- 🎁 BLOG
---- 
-
-## TECHNOLOGY && Features
-- HTML5
-- CSS3
-- RESPONSIVE DESIGN
-- JS
-- BOOTSTRAP5
-- JQUERY
-- JAVASCRIPT
-- SQL
-- H2DB
-- MYSQL
-- POSTGRESQL
-- JAVA CORE
-- SPRING FRAMEWORK
-- SPRING BOOT
----
-
-## Libraries && Programming
-- Thymeleaf
-- Lombok
-- Validation
-- Mysql
-- Postgresql
-- Model Mapper
-- Password Encoder
-- Open Api Configuration
-- H2DB
-- MYSQL
-- POSTGRESQL
-- JAVA CORE
-- SPRING FRAMEWORK
-- SPRING BOOT
-
----
-
-
-
----
 Support
-As [Hamit Mızrak] writes on the [Markdown site][hm]
+As [Ezgi Buse Işık] writes on the [Markdown site][hm]
 
 > Who am I:
-> Computer Engineering  
-> Senior Full Stack Developer & DEVOPS & MOBIL APP
+> Software Engineering  
+> Analyst Software Developer
 
 [Mail Addres ](ezgibuse159@gmail.com)
 [Tel](ezgibuse159@gmail.com)
@@ -366,13 +243,12 @@ for project , plugins
 ## PORT
 for project , Port
 
-| NAME       | PORT                                                  |
-|------------|-------------------------------------------------------|
-| SonarQube  | [React][http://localhost:9000]                        |
-| React JS   | [React][http://localhost:3000]                        |
-| SPRING     | [Spring][http://localhost:4444]                       |
-| H2-CONSOLE | [H2][http://localhost:4444/h2-console]                |
-| SWAGGER    | [API DOCUMENT][http://localhost:4444/swagger-ui.html] |
+| NAME | PORT                                               |
+| ------ |----------------------------------------------------|
+| React JS| [React][http://localhost:3000]                     |
+| SPRING| [Spring][http://localhost:8080]                    |
+| H2-CONSOLE| [H2][http://localhost:8080/h2-console]             |
+| SWAGGER| [API DOCUMENT][http://localhost:8080/swagger-ui.html] |
 ---
 
 ## Docker
@@ -400,7 +276,7 @@ port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
 ```sh
 docker-compose up -d
 docker-compose down
-Mysql_Dockerfile build -t .
+Dockerfile build -t .
 
 docker container run -d -p 4444:4444 --name backend blog
 docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
@@ -420,7 +296,7 @@ docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger
 [FRONTEND]: <https://github.com/denemed>
 [BACKEND]: <https://github.com/denemed>
 
-[hm]: <https://github.com/ezgibuseisik>
+[hm]: <https://github.com/ezgibuse-akkaya>
 [markdown-it]: <https://github.com/markdown-it/markdown-it>
 [Ace Editor]: <http://ace.ajax.org>
 [node.js]: <http://nodejs.org>
