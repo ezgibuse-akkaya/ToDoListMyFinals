@@ -100,8 +100,8 @@ npm run nodemon_q
 
 ## REACT JS INSTALL
 ``sh
-npx create-react-app blog
-cd blog
+npx create-react-app frontend
+cd frontend
 npm start
 
 #### backend with frontend connectivity
@@ -231,12 +231,12 @@ Hello world!
 ![README PNG](./image/readme.png)
 
 ---
-## Blog Project:
+## ToDo Project:
 Spring Boot And React JS
 
 - Backend: Java Core, Spring Framework
 - Frontend:  React JS, JS, +ES5
-- 🎁 BLOG
+- 🎁 ToDo
 --- 
 
 ## TECHNOLOGY && Features
@@ -308,9 +308,9 @@ REACT JS
 ```sh
 npm -v
 node -v
-npx create-react-app blog
+npx create-react-app frontend
 npm i
-cd blog
+cd frontend
 npm start
 ```
 ---
@@ -402,7 +402,7 @@ docker-compose up -d
 docker-compose down
 Mysql_Dockerfile build -t .
 
-docker container run -d -p 4444:4444 --name backend blog
+docker container run -d -p 8000:8080 --name backend frontend
 docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
 ```
 
@@ -412,7 +412,7 @@ docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger
 
 ## License
 
-**BLOG PROJECT !**
+**ToDo PROJECT !**
 
 [//]: # (Variable)
 [RTool]: <https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi>
