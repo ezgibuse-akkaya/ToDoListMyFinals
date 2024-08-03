@@ -1,23 +1,76 @@
-.button-container {
-    margin: 20px 0;
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Başlık ve alt başlık stilleri */
+.header-container {
     text-align: center;
+    margin: 20px 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Arama ve butonlar düzeni */
+.search-container {
+    margin: 20px;
+}
+
+.search-container .search {
+    width: 100%; /* Arama kutusunun genişliği */
+    max-width: 400px; /* Maksimum genişlik */
+    margin-bottom: 10px; /* Butonlar ile arama kutusu arasındaki boşluk */
+    display: block;
+}
+
+/* Butonları yan yana hizalama */
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Butonları sola yasla */
+    gap: 10px; /* Butonlar arasına boşluk */
+    margin-bottom: 20px; /* Tablo ile butonlar arasına boşluk */
 }
 
 .button-container button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 12px 24px; /* Daha geniş padding */
+    border-radius: 8px; /* Daha yuvarlak köşeler */
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500; /* Daha belirgin metin */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Hover ve aktif durum efekti */
 .button-container button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hoverda gölge efekti */
+}
+
+.button-container button:active {
+    background-color: #003d80;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Aktif durumda gölge efekti */
+    transform: scale(1);
 }
 
 .button-container button.active {
@@ -25,6 +78,46 @@
     color: white;
 }
 
+/* Focus durumunda buton */
 .button-container button:focus {
     outline: none;
+}
+
+/* Checkbox stilleri */
+input[type="checkbox"] {
+    position: relative;
+    z-index: 10; /* Checkbox'ın tıklanabilirliğini sağlamak için */
+    width: 20px; /* Checkbox boyutu */
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Tablo stilleri */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fafafa; /* Tablo arka plan rengini beyazımsı hale getir */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #e0e0e0; /* Başlık hücreleri için gri ton */
+    color: #333;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternatif satırlar için çok hafif gri */
+}
+
+.table tr:hover {
+    background-color: #eaeaea; /* Hoverda daha belirgin bir gri */
 }

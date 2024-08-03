@@ -61,11 +61,10 @@ public class ToDoService implements IToDoService {
         toDoRepository.deleteAll();
     }
 
-    // Add method to update completion status
     public ToDo updateCompletionStatus(Long id, boolean done) {
-        return toDoRepository.findById(id).map(st -> {
-            st.setDone(done);
-            return toDoRepository.save(st);
-        }).orElseThrow(() -> new ToDoNotFoundException("Sorry, this ToDo could not be found"));
+        ToDo toDo = toDoRepository.findById(id)
+                .orElseThrow(() -> new ToDoNotFoundException("ToDo not found"));
+        toDo.setDone(done);
+        return toDoRepository.save(toDo);
     }
 }
