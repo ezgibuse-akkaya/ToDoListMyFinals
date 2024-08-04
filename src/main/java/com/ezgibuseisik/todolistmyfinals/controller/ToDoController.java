@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @CrossOrigin("http://localhost:3000")
@@ -34,8 +35,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "400", description = "Invalid input")
     })
     @PostMapping
-    public ToDo addToDo(@RequestBody ToDo toDo) {
-        return toDoService.addToDo(toDo);
+    public ResponseEntity<ToDo> addToDo(@RequestBody ToDo toDo) {
+        ToDo createdToDo = toDoService.addToDo(toDo);
+        return new ResponseEntity<>(createdToDo, HttpStatus.CREATED);
     }
 
     @Operation(summary = "Update an existing todo", description = "Update the details of an existing todo item")
@@ -44,8 +46,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "404", description = "Todo not found")
     })
     @PutMapping("/update/{id}")
-    public ToDo updateToDo(@RequestBody ToDo toDo, @PathVariable Long id) {
-        return toDoService.updateToDo(toDo, id);
+    public ResponseEntity<ToDo> updateToDo(@RequestBody ToDo toDo, @PathVariable Long id) {
+        ToDo updatedToDo = toDoService.updateToDo(toDo, id);
+        return new ResponseEntity<>(updatedToDo, HttpStatus.OK);
     }
 
     @Operation(summary = "Update completion status", description = "Update the completion status of a todo item")
@@ -54,8 +57,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "404", description = "Todo not found")
     })
     @PutMapping("/updateStatus/{id}")
-    public ToDo updateCompletionStatus(@PathVariable Long id, @RequestParam boolean done) {
-        return toDoService.updateCompletionStatus(id, done);
+    public ResponseEntity<ToDo> updateCompletionStatus(@PathVariable Long id, @RequestParam boolean done) {
+        ToDo updatedToDo = toDoService.updateCompletionStatus(id, done);
+        return new ResponseEntity<>(updatedToDo, HttpStatus.OK);
     }
 
     @Operation(summary = "Delete a todo", description = "Delete a todo item by ID")
@@ -64,8 +68,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "404", description = "Todo not found")
     })
     @DeleteMapping("/delete/{id}")
-    public void deleteToDo(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteToDo(@PathVariable Long id) {
         toDoService.deleteToDo(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @Operation(summary = "Get a todo by ID", description = "Retrieve a todo item by its ID")
@@ -74,8 +79,9 @@ public class ToDoController {
             @ApiResponse(responseCode = "404", description = "Todo not found")
     })
     @GetMapping("/todo/{id}")
-    public ToDo getToDoById(@PathVariable Long id) {
-        return toDoService.getToDoById(id);
+    public ResponseEntity<ToDo> getToDoById(@PathVariable Long id) {
+        ToDo todo = toDoService.getToDoById(id);
+        return new ResponseEntity<>(todo, HttpStatus.OK);
     }
 
     @Operation(summary = "Delete all todos", description = "Delete all todo items")
@@ -83,7 +89,8 @@ public class ToDoController {
             @ApiResponse(responseCode = "204", description = "All todos successfully deleted")
     })
     @DeleteMapping("/deleteAll")
-    public void deleteAllToDos() {
+    public ResponseEntity<Void> deleteAllToDos() {
         toDoService.deleteAllToDos();
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
