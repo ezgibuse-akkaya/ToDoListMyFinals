@@ -61,6 +61,12 @@ public class ToDoService implements IToDoService {
         toDoRepository.deleteAll();
     }
 
+    @Override
+    public void deleteDone() {
+        toDoRepository.deleteByDone(true);
+    }
+
+
     public ToDo updateCompletionStatus(Long id, boolean done) {
         ToDo toDo = toDoRepository.findById(id)
                 .orElseThrow(() -> new ToDoNotFoundException("ToDo not found"));

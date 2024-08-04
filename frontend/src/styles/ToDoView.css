@@ -121,3 +121,26 @@ input[type="checkbox"] {
 .table tr:hover {
     background-color: #eaeaea; /* Hoverda daha belirgin bir gri */
 }
+/* ToDoView.css */
+
+.action-buttons {
+    position: relative;
+}
+
+.delete-done-container {
+    position: relative;
+}
+
+.delete-done-btn {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+.delete-done-container:hover .delete-done-btn {
+    opacity: 1; /* Show the button on hover */
+}
+
+/* Optional: If you want to position the button */
+.delete-done-container {
+    display: inline-block;
+}

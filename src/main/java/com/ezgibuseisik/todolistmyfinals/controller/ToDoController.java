@@ -93,4 +93,13 @@ public class ToDoController {
         toDoService.deleteAllToDos();
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+    @Operation(summary = "Delete all done todos", description = "Delete all todo items that are marked as done")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "All done todos successfully deleted")
+    })
+    @DeleteMapping("/deleteDone")
+    public ResponseEntity<Void> deleteDone() {
+        toDoService.deleteDone();
+        return ResponseEntity.noContent().build();
+    }
 }

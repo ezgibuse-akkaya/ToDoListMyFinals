@@ -43,6 +43,24 @@ const ToDoView = () => {
         }
     };
 
+    const handleDeleteAll = async () => {
+        try {
+            await axios.delete("http://localhost:8080/todos/deleteAll");
+            loadToDos();
+        } catch (error) {
+            console.error("Error deleting all todos:", error);
+        }
+    };
+
+    const handleDeleteDone = async () => {
+        try {
+            await axios.delete("http://localhost:8080/todos/deleteDone");
+            loadToDos(); 
+        } catch (error) {
+            console.error("Error deleting done todos:", error);
+        }
+    };
+
     const filteredTodos = todos.filter(todo => {
         if (filter === "all") return true;
         if (filter === "done") return todo.done;
@@ -129,6 +147,16 @@ const ToDoView = () => {
                         ))}
                 </tbody>
             </table>
+            <div className="action-buttons">
+                <button onClick={handleDeleteAll} className="btn btn-danger">
+                    Delete All
+                </button>
+                <div className="delete-done-container">
+                    <button onClick={handleDeleteDone} className="btn btn-warning delete-done-btn">
+                        Delete Done
+                    </button>
+                </div>
+            </div>
         </section>
     );
 };

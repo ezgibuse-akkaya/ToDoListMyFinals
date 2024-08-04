@@ -10,5 +10,6 @@ public interface IToDoService {
     ToDo getToDoById(Long id);
     void deleteToDo(Long id);
     void deleteAllToDos();
+    void deleteDone();
     ToDo updateCompletionStatus(Long id, boolean done); // Yeni metodu buraya ekleyin
 }
